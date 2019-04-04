@@ -5,7 +5,7 @@ class brcli{
 	Socket s;
 	BufferedReader br;
 	String str;
-	brcli()
+	public brcli()
 	{
 	try{
 		s=new Socket("localhost",8000);
@@ -14,7 +14,7 @@ class brcli{
 		{
 		try{
 			str=br.readLine();
-			System.out.Println(str);
+			System.out.println(str);
 			if(str.equals("exit"))
 				System.exit(0);
 		}
@@ -23,8 +23,8 @@ class brcli{
 	}
 	catch(Exception e){}
 	}
-	public ststic void main(String args[])
+	public static void main(String args[])
 	{
-		brcli c=new brcli();
+		brcli s=new brcli();
 	}
 }
